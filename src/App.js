@@ -8,14 +8,14 @@ import axios from './axios';
 function App() {
   const [messages, setMessages] = useState([]);
 
-  useEffect(()=> {
-  axios.get('/messages/sync')
-   .then(response => {
-    setMessages(response.data);
-   });
+  useEffect(() => {
+    axios.get('/messages/sync')
+      .then(response => {
+        setMessages(response.data);
+      });
   }, []);
 
-  useEffect(()=> {
+  useEffect(() => {
     const pusher = new Pusher('fa416ff4bced976cd142', {
       cluster: 'ap2'
     });
@@ -36,9 +36,9 @@ function App() {
   return (
     <div className="app">
       <div class="app-body">
-      <Sidebar />
-      <Chat messages={messages}/>
-    </div>
+        <Sidebar />
+        <Chat messages={messages} />
+      </div>
     </div>
   );
 }

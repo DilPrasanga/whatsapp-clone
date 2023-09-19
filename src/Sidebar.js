@@ -14,26 +14,26 @@ function Sidebar() {
         <Avatar src="https://i.pravatar.cc/150?img=43" />
         <div className='sidebar__headerRight'>
           <IconButton>
-          <DonutLargeIcon />
+            <DonutLargeIcon />
           </IconButton>
           <IconButton>
-          <ChatIcon />
+            <ChatIcon />
           </IconButton>
           <IconButton>
-          <MoreVertIcon />
+            <MoreVertIcon />
           </IconButton>
         </div>
       </div>
-      <div className='sidebar__search'> 
-       <div className='sidebar__searchContainer'> 
-       <SearchIcon />
-       <input placeholder='Search or start new chat' type='text'/>
-       </div>
+      <div className='sidebar__search'>
+        <div className='sidebar__searchContainer'>
+          <SearchIcon />
+          <input placeholder='Search or start new chat' type='text' />
+        </div>
       </div>
       <div className='sidebar__chats'>
-      <SidebarChat />
-      <SidebarChat />
-      <SidebarChat />
+        <SidebarChat />
+        <SidebarChat />
+        <SidebarChat />
       </div>
     </div>
   )

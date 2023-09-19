@@ -14,12 +14,12 @@ function Chat({ messages }) {
     e.preventDefault();
 
     await axios.post('/messages/new', {
-    message: input,
-    name: "Demo app",
-    timestamp:"Just Now!",
-    received: false,
+      message: input,
+      name: "Demo app",
+      timestamp: "Just Now!",
+      received: false,
     });
-    
+
     setInput("");
   };
   return (
@@ -32,14 +32,14 @@ function Chat({ messages }) {
         </div>
 
         <div className="chat__headerRight">
-        <IconButton>
-          <SearchIcon />
+          <IconButton>
+            <SearchIcon />
           </IconButton>
           <IconButton>
-          <AttachFileIcon />
+            <AttachFileIcon />
           </IconButton>
           <IconButton>
-          <MoreVertIcon />
+            <MoreVertIcon />
           </IconButton>
         </div>
       </div>
@@ -47,20 +47,20 @@ function Chat({ messages }) {
       <div className="chat__body">
         {messages.map((message) => (
           <p className={`chat__message ${message.received && 'chat__reciever'} `}>
-          <span className="chat__name">{message.name}</span>
-          {message.message}
-          <span className="chat__timestamp">
-          {message.timestamp}</span>
-            </p>
+            <span className="chat__name">{message.name}</span>
+            {message.message}
+            <span className="chat__timestamp">
+              {message.timestamp}</span>
+          </p>
         ))}
       </div>
 
       <div className="chat__footer">
         <InsertEmoticonIcon />
         <form>
-          <input value={input} onChange={e => setInput(e.target.value)} placeholder='Type a message' type='text'/>
+          <input value={input} onChange={e => setInput(e.target.value)} placeholder='Type a message' type='text' />
           <button onClick={sendMessage}
-          type='submit'>send a message</button>
+            type='submit'>send a message</button>
         </form>
         <MicIcon />
       </div>
