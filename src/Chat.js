@@ -25,7 +25,7 @@ function Chat({ messages }) {
   return (
     <div className="chat">
       <div className="chat__header">
-        <Avatar />
+        <Avatar src="https://i.pravatar.cc/150?img=24"/>
         <div className="chat__headerInfo">
           <h3>Room Name</h3>
           <p>Last seen at...</p>
